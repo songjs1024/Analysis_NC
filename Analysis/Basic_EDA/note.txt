@@ -1,1 +1,6 @@
+payment = pd.read_csv('C:/Users/CafeAlle/Desktop/data/train_payment.csv')
 
+total_payment = payment.groupby(['acc_id']).sum()
+total_payment
+
+plt.violinplot(total_payment['amount_spent'])
